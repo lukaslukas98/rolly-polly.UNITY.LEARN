@@ -6,6 +6,8 @@ public class PlayerController : Entity
 {
 
     private GameObject focalPoint;
+    [SerializeField]
+    public GameManager gameManager;
 
 
     // Start is called before the first frame update
@@ -22,7 +24,7 @@ public class PlayerController : Entity
         DestroyIfOutOfBounds();
     }
 
-    public void Move()
+    public void Move()//POLYMORPHISM
     {
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -30,7 +32,7 @@ public class PlayerController : Entity
         thisRigidbody.AddForce(focalPoint.transform.right * speed * horizontalInput);
     }
 
-    private void DestroyIfOutOfBounds()
+    protected override void DestroyIfOutOfBounds()//POLYMORPHISM
     {
         if (transform.position.y < -10 ||
             transform.position.z < -30 ||
@@ -38,7 +40,7 @@ public class PlayerController : Entity
             transform.position.x < -30 ||
             transform.position.x > 30)
         {
-            GameManager.isGameOver = true;
+            gameManager.gameOver();
         }
     }
 }

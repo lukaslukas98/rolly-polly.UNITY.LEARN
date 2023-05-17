@@ -8,13 +8,13 @@ public class PowerUpController : MonoBehaviour
 {
     private float powerUpStrenght = 50f;
     [SerializeField]
-    private GameObject missile;
+    private GameObject missile;//ENCAPSULATION
     private Rigidbody playerRigidbody;
     private float jumpSpeed = 10f, smashSpeed = 100f,smashStrength = 100f;
     private bool hasJumped = false;
     [SerializeField]
     public static powerUpType currentPowerUpType;
-
+    
 
     void Start()
     {

@@ -17,6 +17,6 @@ public class Enemy : Entity
     void Update()
     {
         MoveTo(thisRigidbody,target);
-        DestroyIfOutOfBounds();
+        DestroyIfOutOfBounds();//INHERITANCE
     }
 }

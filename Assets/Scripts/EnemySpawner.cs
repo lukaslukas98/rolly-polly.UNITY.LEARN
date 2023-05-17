@@ -19,20 +19,13 @@ public class EnemySpawner : MonoBehaviour
     public TextMeshProUGUI waveText;
 
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
         waveText.SetText("Wave: " + spawnCount);
         enemyCount = FindObjectsOfType<Enemy>().Length;
 
-        if (enemyCount == 0)
+        if (enemyCount == 0 && !GameManager.isGameOver)
         {
             spawnCount++;
             SpawnEnemies(spawnCount);
