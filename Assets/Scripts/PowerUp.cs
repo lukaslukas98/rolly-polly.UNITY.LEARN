@@ -30,7 +30,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.CompareTag("Player") && PowerUpController.currentPowerUpType == powerUpType.none)
         {
-            EnablePowerUp(thisPowerUpType);
+            EnablePowerUp(thisPowerUpType);//ABSTRACTION
         }
     }
 

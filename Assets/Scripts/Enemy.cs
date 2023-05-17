@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Enemy : Entity
+public class Enemy : Entity//INHERITANCE
 {
 
     // Start is called before the first frame update

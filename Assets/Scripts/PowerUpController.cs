@@ -12,8 +12,7 @@ public class PowerUpController : MonoBehaviour
     private Rigidbody playerRigidbody;
     private float jumpSpeed = 10f, smashSpeed = 100f,smashStrength = 100f;
     private bool hasJumped = false;
-    [SerializeField]
-    public static powerUpType currentPowerUpType;
+    [SerializeField] public static powerUpType currentPowerUpType;
     
 
     void Start()
